@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import './App.scss';
+// ...existing code...
 
 function App() {
   const [data, setData] = useState([]);
@@ -7,7 +9,7 @@ function App() {
   fetch('/MOCK_DATA.json')
     .then((res) => res.json())
     .then((json) => {
-      console.log(json); // 👈 thêm dòng này
+      console.log(json); 
       setData(json);
     })
     .catch((err) => console.error('Error loading data:', err));
@@ -31,7 +33,7 @@ function App() {
             style={{
               border: '1px solid gray',
               marginBottom: 10,
-              padding: 10,
+              padding: 10 ,
               borderRadius: 8,
             }}
           >
